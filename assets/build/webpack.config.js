@@ -16,6 +16,17 @@ const config = require('./config');
 const assetsFilenames = (config.enabled.cacheBusting) ? config.cacheBusting : '[name]';
 const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceMap';
 
+const kssWebpackPlugin = require('kss-webpack-plugin');
+const kssConfig = {
+  source: config.paths.assets +'/styles/**/*.{sass,scss}',
+  template:'',
+  destination:'',
+  css:[
+  ],
+  js:[
+  ]
+}
+
 const jsLoader = {
   test: /\.js$/,
   exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
@@ -177,6 +188,7 @@ const webpackConfig = {
         failOnError: true,
       },
     }),
+    new kssWebpackPlugin(kssConfig)
   ],
 };
 
