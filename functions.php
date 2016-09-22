@@ -49,7 +49,9 @@ $sage_includes = [
     'src/helpers.php',
     'src/setup.php',
     'src/filters.php',
-    'src/admin.php'
+    'src/admin.php',
+    'src/cleanup.php',
+    //'src/editor.php' /* Enable to add custom TinyMCE modifications */
 ];
 array_walk($sage_includes, function ($file) {
     if (!locate_template($file, true, true)) {

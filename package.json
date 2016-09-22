@@ -56,6 +56,8 @@
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webpack-plugin": "^1.1.0",
     "imports-loader": "^0.6.5",
+    "kss": "^3.0.0-beta.14",
+    "kss-webpack-plugin": "^1.2.0",
     "lodash": "^4.15.0",
     "minimist": "^1.2.0",
     "monkey-hot-loader": "github:rmarscher/monkey-hot-loader#webpack2-import",
