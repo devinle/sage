@@ -19,8 +19,8 @@ const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceM
 const kssWebpackPlugin = require('kss-webpack-plugin');
 const kssConfig = {
   source: config.paths.assets +'/styles/**/*.{sass,scss}',
-  template:'',
-  destination:'',
+  template: config.paths.assets +'/ed-kss-template',
+  destination: config.paths.root,
   css:[
   ],
   js:[
