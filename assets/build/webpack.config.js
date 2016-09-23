@@ -19,7 +19,7 @@ const sourceMapQueryStr = (config.enabled.sourceMaps) ? '+sourceMap' : '-sourceM
 const kssWebpackPlugin = require('kss-webpack-plugin');
 const kssConfig = {
   source: path.join(__dirname,'../styles'),
-  template: path.join(__dirname,'../ed-kss-template'),
+  builder: path.join(__dirname,'../ed-kss-template'),
   destination: path.join(__dirname,'../../../../../styleguide'),
   homepage: '../../../README.md',
   title: 'WP Starter Kit',
