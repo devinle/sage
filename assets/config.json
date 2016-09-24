@@ -9,7 +9,6 @@
     ]
   },
   "watch": [
-    "assets/scripts/**/*.js",
     "templates/**/*.php",
     "src/**/*.php"
   ],

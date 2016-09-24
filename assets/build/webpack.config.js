@@ -155,6 +155,7 @@ const webpackConfig = {
       })],
       disable: (config.enabled.watcher),
     }),
+    new kssWebpackPlugin(kssConfig),
     new ExtractTextPlugin({
       filename: `styles/${assetsFilenames}.css`,
       allChunks: true,
@@ -189,8 +190,7 @@ const webpackConfig = {
         failOnWarning: false,
         failOnError: true,
       },
-    }),
-    new kssWebpackPlugin(kssConfig)
+    })
   ],
 };
 
