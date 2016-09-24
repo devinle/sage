@@ -4,7 +4,7 @@ Buttons
 Buttons
 
 Markup:
-<a href="" class="btn {$modifiers}">Button</a>
+<a href="" class="btn {{modifier_class}}">Button</a>
 
 .btn--hollow      - Hollow button
 .btn--hollow-white  - Hollow button
@@ -17,9 +17,3 @@ Markup:
 Styleguide Common.Buttons
 
 */
-a {
-  color: green;
-}
-body {
-  background-color: yellow;
-}

@@ -18,7 +18,7 @@
     }
   ],
   "scripts": {
-    "build": "webpack --progress --config assets/build/webpack.config.js",
+    "build": "webpack --progress --colors --config assets/build/webpack.config.js",
     "build:production": "npm run build -s -- -p",
     "start": "npm run build -s -- --watch",
     "clean": "rimraf dist",

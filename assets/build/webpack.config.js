@@ -26,6 +26,7 @@ const kssConfig = {
   css:[
   ],
   js:[
+   '/app/themes/sage/dist/scripts/main.js'
   ]
 }
 
