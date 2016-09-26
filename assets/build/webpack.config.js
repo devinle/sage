@@ -24,6 +24,7 @@ const kssConfig = {
   homepage: '../../../README.md',
   title: 'WP Starter Kit',
   css:[
+   '/app/themes/sage/dist/styles/main.css'
   ],
   js:[
    '/app/themes/sage/dist/scripts/main.js'
