@@ -51,7 +51,8 @@ $sage_includes = [
     'src/filters.php',
     'src/admin.php',
     'src/cleanup.php',
-    //'src/editor.php' /* Enable to add custom TinyMCE modifications */
+    //'src/editor.php', /* Enable to add custom TinyMCE modifications */
+    //'src/acf_search.php', /* To enhance search if using ACF */
 ];
 array_walk($sage_includes, function ($file) {
     if (!locate_template($file, true, true)) {
