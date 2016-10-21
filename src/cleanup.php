@@ -49,7 +49,7 @@ remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 Move jQuery to footer for non admin use (Better for performance)
 */
 function moveJqueryToFooter() {
-  if( !is_admin()){
+  if( !is_admin() && !is_user_logged_in() ){
     wp_deregister_script('jquery');
     //wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'), false, '3.1.0', true);
     //wp_enqueue_script('jquery');
