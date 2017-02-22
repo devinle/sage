@@ -15,5 +15,10 @@
   "publicPath": "/app/themes/sage",
   "devUrl": "http://wpstarter.local",
   "proxyUrl": "https://localhost:3000",
-  "cacheBusting": "[name]_[hash:8]"
+  "cacheBusting": "[name]_[hash:8]",
+  "browsers": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ]
 }
