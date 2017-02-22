@@ -1,13 +1,17 @@
 const webpack = require('webpack');
-const BrowserSyncPlugin = require('./webpack.plugin.browsersync');
-const mergeWithConcat = require('./util/mergeWithConcat');
+// const BrowserSyncPlugin = require('./webpack.plugin.browsersync');
+// const mergeWithConcat = require('./util/mergeWithConcat');
+const BrowserSyncPlugin = require('browsersync-webpack-plugin');
 
 const config = require('./config');
 
 module.exports = {
-  output: { pathinfo: true },
-  debug: true,
+  output: {
+    pathinfo: true,
+    publicPath: config.proxyUrl + config.publicPath,
+  },
   devtool: '#cheap-module-source-map',
+  stats: false,
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -16,9 +20,10 @@ module.exports = {
       target: config.devUrl,
       publicPath: config.publicPath,
       proxyUrl: config.proxyUrl,
-      browserSyncOptions: mergeWithConcat({
+      /*browserSyncOptions: mergeWithConcat({
         files: config.watch,
-      }, config.browserSyncOptions),
+      }, config.browserSyncOptions),*/
+      watch: config.watch,
     }),
   ],
 };
